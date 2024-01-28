@@ -29,7 +29,7 @@ public class AccountControllerTest {
     @Test
     void shouldAddAcount() throws Exception{
         Account account = new Account("Kasia", "XYZ", 10.0,"123", Currency.PLN);
-        webTestClient.post().uri("/account")
+        webTestClient.post().uri("/account/add")
                 .contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(objectMapper.writeValueAsString(account))
                 .exchange()
